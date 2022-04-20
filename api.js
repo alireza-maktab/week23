@@ -25,7 +25,7 @@ app.get("/user", (req, res) => {
 });
 
 app.get("/task/:id", (req, res) => {
-  const possibleIds = [1, 2, 3, 4, 5];
+  const possibleIds = ["1", "2", "3", "4", "5"];
   const { id } = req.params;
   if (!possibleIds.includes(id)) {
     res.status(404).send(
@@ -43,8 +43,8 @@ app.get("/task/:id", (req, res) => {
   }
 });
 
-app.get("/tags/:id", (req, res) => {
-  const possibleIds = [1, 2, 3];
+app.get("/tag/:id", (req, res) => {
+  const possibleIds = ["1", "2", "3"];
   const { id } = req.params;
   if (!possibleIds.includes(id)) {
     res.status(404).send(
