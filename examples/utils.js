@@ -19,6 +19,7 @@ const getPost = (id) =>
     if (res.status === 500) {
       throw new Error("bad things happened");
     }
+    return res;
   });
 const getComment = (id) => fetch(`http://localhost:3000/comment/${id}`);
 const pageInit = (_) => Promise.resolve(true);
